@@ -1,38 +1,42 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* Estilo del placeholder en el formulario */
+input::placeholder {
+    color: #8174A0; /* Color gris claro */
+    opacity: 1; /* Asegura que el color se aplique correctamente */
   }
-}
+  
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Estilo del contorno y sombra del formulario */
+.form-container {
+    border: 1px solid #d3d3d3; /* Contorno gris claro */
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    padding: 20px; /* Espaciado interno */
+    background-color: white; /* Fondo blanco para el formulario */
+    position: relative; /* Para posicionar el logo */
   }
-  to {
-    transform: rotate(360deg);
+  
+  /* Estilo del logo dentro del formulario */
+  .logo {
+    position: absolute; /* Permite que el logo esté sobre el formulario */
+    top: -40px; /* Ajusta la posición del logo hacia arriba */
+    left: 50%; /* Centra el logo horizontalmente */
+    transform: translateX(-50%); /* Alinea el centro del logo */
+    width: 100px; /* Ajusta el tamaño del logo */
+    height: auto; /* Mantiene la relación de aspecto */
   }
+
+
+  @media screen and (max-width: 768px) {
+    .navbar-menu {
+      display: none; /* Oculta el menú por defecto en móviles */
+    }
+    .navbar-burger.is-active + .navbar-menu {
+      display: block; /* Muestra el menú cuando el burger está activo */
+    }
+  }
+  
+
+  /* Asegura que el menú tenga el mismo fondo que la barra de navegación */
+.navbar-menu.is-active {
+  background-color: #8174A0; /* Color turquesa igual que la barra */
 }

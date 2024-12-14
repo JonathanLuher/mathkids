@@ -1,0 +1,73 @@
+body{
+    background-color: #ffffff;
+}
+
+/* Contenedor de la línea de tiempo */
+.timeline-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    background-color: #ffffff; /* Fondo blanco */
+  }
+  
+  /* Línea de tiempo horizontal */
+  .timeline {
+    display: flex;
+    align-items: flex-start; /* Alineación de los elementos al principio */
+    position: relative;
+  }
+  
+  /* Línea central de la línea de tiempo (ahora horizontal) */
+  .timeline::before {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color: #ccc;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+  
+  /* Estilo de cada item de la línea de tiempo */
+  .timeline-item {
+    display: flex;
+    flex-direction: column; /* Los elementos dentro de cada item se organizan en columna */
+    align-items: center;
+    margin: 0 20px;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  /* Círculo de cada nivel */
+  .timeline-item .circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #ddd;
+    margin-bottom: 5px; /* Espacio reducido entre el círculo y el texto */
+    transition: background-color 0.3s;
+  }
+  
+  /* Estilo cuando un nivel es seleccionado */
+  .timeline-item.selected .circle {
+    background-color: #4CAF50; /* Color cuando se selecciona */
+  }
+  
+  .timeline-item .label {
+    font-size: 14px; /* Tamaño de fuente un poco más pequeño */
+    color: #333;
+    text-align: center;
+  }
+  
+  /* Efecto hover */
+  .timeline-item:hover .circle {
+    background-color: #4CAF50;
+  }
+
+  .black-icon {
+    color: black;
+  }
+  
