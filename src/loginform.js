@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import logo from './images/logo_icon.png';
 import { Link } from 'react-router-dom';
-import "./index.css";
+import floatingImage1 from './images/floating_image1.png';
+import floatingImage2 from './images/floating_image2.png';
+import './index.css';
+import './login.css';
 
 function LoginForm() {
-  // Estado para manejar la visibilidad de la contraseña
   const [passwordVisible, setPasswordVisible] = useState(false);
-
   // Función para alternar la visibilidad de la contraseña
   const togglePasswordVisibility = () => {
     setPasswordVisible(!passwordVisible);
@@ -17,18 +18,14 @@ function LoginForm() {
       <br />
       <div className="container">
         <div className="column is-half is-offset-one-quarter">
-          {/* Contenedor del formulario con estilos de contorno y sombra */}
-          <div className="card has-background-white">
+          <div className="card has-background-white floating-card">
             <div className="card-content">
               <form>
-                {/* Imagen del logo */}
                 <div className="has-text-centered">
                   <img src={logo} alt="Logo" width="150" height="150" />
                 </div>
                 <h1 className="title has-text-dark has-text-centered">Inicio de sesión</h1>
                 <br />
-
-                {/* Campo para el nombre de usuario */}
                 <div className="field">
                   <label className="label has-text-dark">Usuario</label>
                   <div className="control">
@@ -41,22 +38,26 @@ function LoginForm() {
                   </div>
                 </div>
                 <br />
-
-                {/* Campo para la contraseña */}
                 <div className="field">
                   <label className="label has-text-dark">Contraseña</label>
                   <div className="control">
                     <div className="input-container">
                       <input
                         className="input"
-                        type={passwordVisible ? "text" : "password"} // Muestra u oculta la contraseña
+                        type={passwordVisible ? 'text' : 'password'}
                         placeholder="Ingresa tu contraseña"
                         style={{ backgroundColor: '#f5f5f5', color: '#333' }}
                       />
                       <span
                         className="icon is-small is-right"
-                        onClick={togglePasswordVisibility} // Al hacer clic, cambia la visibilidad
-                        style={{ cursor: 'pointer', position: 'absolute', right: '10px', top: '50%', transform: 'translateY(-50%)' }}
+                        onClick={togglePasswordVisibility}
+                        style={{
+                          cursor: 'pointer',
+                          position: 'absolute',
+                          right: '10px',
+                          top: '50%',
+                          transform: 'translateY(-50%)',
+                        }}
                       >
                         {/* Cambiar ícono según el estado de visibilidad */}
                         <i className="material-icons">
@@ -68,7 +69,6 @@ function LoginForm() {
                 </div>
                 <br />
 
-                {/* Enlace para restablecer la contraseña y botón de inicio de sesión */}
                 <div className="field is-flex is-justify-content-space-between is-align-items-center">
                   <div className="control">
                     <Link to="/reset-password" className="has-text-grey">¿Olvidaste tu contraseña?</Link>
@@ -79,6 +79,16 @@ function LoginForm() {
                 </div>
               </form>
             </div>
+            <img
+              src={floatingImage1}
+              alt="Flotante Izquierda"
+              className="floating-image left"
+            />
+            <img
+              src={floatingImage2}
+              alt="Flotante Derecha"
+              className="floating-image right"
+            />
           </div>
         </div>
       </div>

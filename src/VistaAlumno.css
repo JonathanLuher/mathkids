@@ -53,7 +53,7 @@ body{
   
   /* Estilo cuando un nivel es seleccionado */
   .timeline-item.selected .circle {
-    background-color: #4CAF50; /* Color cuando se selecciona */
+    background-color: #5e1a8a; /* Color cuando se selecciona */
   }
   
   .timeline-item .label {
@@ -64,7 +64,7 @@ body{
   
   /* Efecto hover */
   .timeline-item:hover .circle {
-    background-color: #4CAF50;
+    background-color: #2c0c35;
   }
 
   .black-icon {
