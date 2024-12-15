@@ -1,0 +1,52 @@
+@keyframes floatLeft {
+    0% {
+        transform: translateX(-250px) translateY(-20%);
+    }
+    50% {
+        transform: translateX(-200px) translateY(20%);
+    }
+    100% {
+        transform: translateX(-250px) translateY(-20%);
+    }
+}
+
+@keyframes floatRight {
+    0% {
+        transform: translateX(250px) translateY(-20%);
+    }
+    50% {
+        transform: translateX(200px) translateY(30%);
+    }
+    100% {
+        transform: translateX(250px) translateY(-20%);
+    }
+}
+
+.floating-image {
+    position: fixed;
+    top: 0;
+    transform: translateY(0);
+    z-index: -1;
+    transition: transform 0.3s ease;
+    width: 40%;
+    height: auto;
+}
+
+.floating-image.left {
+    left: -120px;
+    animation: floatLeft 3s infinite ease-in-out;
+}
+
+.floating-image.right {
+    right: -150px;
+    animation: floatRight 4s infinite ease-in-out;
+}
+
+.card:hover ~ .floating-image.left,
+.card:hover ~ .floating-image.right {
+    transform: translateY(0) scale(1.2);
+}
+
+.card:hover {
+    transform: scale(1.05);
+}

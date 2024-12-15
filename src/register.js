@@ -14,8 +14,8 @@ function RegisterForm() {
   return (
     <div className="has-background-white">
       <br /><br />
-
-      <div className="container" style={{ border: '1px solid lightgray', boxShadow: '0 2px 5px rgba(0, 0, 0, 0.2)', padding: '20px', borderRadius: '5px' }}>
+      <div className='container'>
+      <div className="card has-background-white">
         <div className="column is-half is-offset-one-quarter">
           <div className="form-container">
             {/* Imagen del logo */}
@@ -31,7 +31,7 @@ function RegisterForm() {
                   <div className="column is-half">
                     {/* Botón para "Maestro" */}
                     <button 
-                      className="button is-success is-fullwidth" 
+                      className="button is-primary is-fullwidth" 
                       onClick={() => handleUserType('register/maestro')} // Redirige a la ruta de maestro
                     >
                       Maestro
@@ -40,7 +40,7 @@ function RegisterForm() {
                   <div className="column is-half">
                     {/* Botón para "Alumno" */}
                     <button 
-                      className="button is-success is-fullwidth" 
+                      className="button is-primary is-fullwidth" 
                       onClick={() => handleUserType('register/alumno')} // Redirige a la ruta de alumno
                     >
                       Alumno
@@ -53,7 +53,7 @@ function RegisterForm() {
         </div>
         <br /><br />
       </div>
-
+      </div>
       <br /><br />
     </div>
   );

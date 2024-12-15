@@ -11,3 +11,43 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.button.is-primary {
+  background-color: #522C5D !important; /* Púrpura oscuro para botón primario */
+  border-color: #8174A0 !important;
+  color: white !important;
+  box-shadow: 0 8px 20px rgba(0.4, 0.4, 0.4, 0.4);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.button.is-primary:hover {
+  background-color: #270c39 !important; /* Color más oscuro al pasar el cursor */
+  border-color: #522C5D !important;
+  box-shadow: 0 12px 30px rgba(0.6, 0.6, 0.6, 0.6);
+}
+
+
+.button.is-light {
+  background-color: #ffe3d8 !important;
+  color: #574386 !important; /* Tono púrpura especificado */
+  border-color: #845162 !important;
+  box-shadow: 0 8px 20px rgba(0.4, 0.4, 0.4, 0.4);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.button.is-light:hover {
+  background-color: #ffffff !important; /* Gris claro al pasar el cursor */
+  color: #270c39 !important;
+  border-color: #040106 !important;
+  box-shadow: 0 16px 30px rgba(0.6, 0.6, 0.6, 0.6);
+}
+
+
+.card.has-background-white {
+  box-shadow: 15px 15px 20px rgba(0.4, 0.4, 0.4, 0.4);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.card.has-background-white:hover {
+  box-shadow: 15px 20px 30px rgba(0.5, 0.5, 0.5, 0.5);
+}

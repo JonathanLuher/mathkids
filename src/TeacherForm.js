@@ -7,7 +7,8 @@ function TeacherForm() {
     <div className="has-background-white">
       <div className="container" >
         <br /> <br/>
-        <div className="form-container is-four-fifths-desktop is-offset-one-fifth-desktop" style={{ border: '1px solid lightgray', boxShadow: '0 2px 5px rgba(0, 0, 0, 0.2)', padding: '20px', borderRadius: '5px' }}>
+        <div className="card has-background-white">
+            <div className="card-content">
             <form>
               {/* Imagen del logo */}
               <div className="has-text-centered">
@@ -153,6 +154,7 @@ function TeacherForm() {
                 </div>
               </div>
             </form>
+            </div>
           </div>
       </div>
       <br /> <br/>
