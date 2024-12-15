@@ -1,6 +1,6 @@
 /* Estilo para el fondo púrpura específico de la barra de navegación */
 .navbar {
-    background-color: #6A42C2 !important; /* Sobrescribimos el color de fondo de Bulma */
+    background-color: #8174A0 !important; /* Sobrescribimos el color de fondo de Bulma */
   }
   
   /* Estilo para el texto de los enlaces en la barra */
@@ -15,26 +15,26 @@
   
   /* Estilo para los botones en la barra de navegación */
   .navbar .button.is-primary {
-    background-color: #8174A0 !important; /* Púrpura oscuro para botón primario */
+    background-color: #522C5D !important; /* Púrpura oscuro para botón primario */
     border-color: #8174A0 !important;
     color: white !important;
   }
   
   .navbar .button.is-primary:hover {
-    background-color: #5e1a8a !important; /* Color más oscuro al pasar el cursor */
-    border-color: #5e1a8a !important;
+    background-color: #2c0c35 !important; /* Color más oscuro al pasar el cursor */
+    border-color: #522C5D !important;
   }
   
   .navbar .button.is-light {
-    background-color: white !important;
-    color: #8174A0 !important; /* Tono púrpura especificado */
-    border-color: #8174A0 !important;
+    background-color: #ffe3d8 !important;
+    color: #574386 !important; /* Tono púrpura especificado */
+    border-color: #845162 !important;
   }
   
   .navbar .button.is-light:hover {
-    background-color: #f4f4f4 !important; /* Gris claro al pasar el cursor */
+    background-color: #ffffff !important; /* Gris claro al pasar el cursor */
     color: #5e1a8a !important;
-    border-color: #5e1a8a !important;
+    border-color: #040106 !important;
   }
   
   /* Estilo para el menú desplegable en dispositivos móviles */

@@ -169,3 +169,22 @@ button:hover {
 .card.has-background-white {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Sombra personalizada */
 }
+
+
+.is-primary {
+    background-color: #522C5D !important; /* Púrpura oscuro para botón primario */
+    border-color: #8174A0 !important;
+    color: white !important;
+}
+
+button.is-option {
+    background-color: #8174A0 !important; /* Púrpura oscuro para botón primario */
+    border-color: #8174A0 !important;
+    color: white !important;
+}
+
+button.is-option:hover{
+    background-color: #522C5D !important; /* Púrpura oscuro para botón primario */
+    border-color: #8174A0 !important;
+    color: white !important;
+}

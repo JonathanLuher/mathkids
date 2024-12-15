@@ -37,8 +37,8 @@ function MainNav() {
           <div className="navbar-end">
             <div className="navbar-item">
               <div className="buttons">
-                <Link to="/register" className="button is-primary">Registro</Link>
-                <Link to="/login" className="button is-light">Iniciar sesión</Link>
+                <Link to="/register" className="button is-light">Registro</Link>
+                <Link to="/login" className="button is-primary">Iniciar sesión</Link>
               </div>
             </div>
           </div>
