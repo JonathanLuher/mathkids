@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import './Nivel1.css';
-import TextoIntroductorio from './TextoIntroductorio';  // Importamos el nuevo componente
+import TextoIntroductorio from './TextoIntroductorio';
 
 // Función para mezclar un arreglo de forma aleatoria (Fisher-Yates)
 const shuffleArray = (array) => {
