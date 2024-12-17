@@ -110,7 +110,7 @@ function LoginForm() {
                       <Link to="/reset-password" className="has-text-grey">¿Olvidaste tu contraseña?</Link>
                     </div>
                     <div className="control">
-                      <button className="button is-primary is-fullwidth" type="submit">Iniciar sesión</button>
+                      <button className="button is-primary2 is-fullwidth" type="submit">Iniciar sesión</button>
                     </div>
                   </div>
                 </form>

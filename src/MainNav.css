@@ -14,13 +14,13 @@
   }
   
   /* Estilo para los botones en la barra de navegación */
-  .navbar .button.is-primary {
+  .navbar .button.is-primary2 {
     background-color: #522C5D !important; /* Púrpura oscuro para botón primario */
     border-color: #8174A0 !important;
     color: white !important;
   }
   
-  .navbar .button.is-primary:hover {
+  .navbar .button.is-primary2:hover {
     background-color: #2c0c35 !important; /* Color más oscuro al pasar el cursor */
     border-color: #522C5D !important;
   }
