@@ -135,6 +135,11 @@ button:hover {
     #timer-container {
         height: 15px;
     }
+
+    .answer-button {
+        height: 50px;    /* Ajuste para pantallas más pequeñas */
+        font-size: 1rem;
+    }
 }
 
 /* Media Queries para pantallas más grandes */
@@ -172,19 +177,102 @@ button:hover {
 
 
 .is-primary {
-    background-color: #522C5D !important; /* Púrpura oscuro para botón primario */
+    background-color: #547A52 !important; /* Púrpura oscuro para botón primario */
     border-color: #8174A0 !important;
     color: white !important;
+    text-align: center; /* Centra el texto horizontalmente */
+    font-size: 2rem;    /* Ajusta el tamaño del texto (puedes cambiarlo según prefieras) */
+    font-weight: bold;  /* Hace el texto más grueso */       /* Cambia el color del texto a negro */
+    margin: 20px 0;
 }
 
-button.is-option {
-    background-color: #8174A0 !important; /* Púrpura oscuro para botón primario */
-    border-color: #8174A0 !important;
-    color: white !important;
+.is-option {
+    background-color: #8174A0 !; /* Púrpura oscuro para botón primario */
+    border-color: #8174A0 ;
+    color: white ;
 }
 
-button.is-option:hover{
-    background-color: #522C5D !important; /* Púrpura oscuro para botón primario */
-    border-color: #8174A0 !important;
-    color: white !important;
+
+
+.question-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px; /* Ajusta el espacio entre las imágenes y la pregunta */
+}
+
+.side-image {
+    width: 100px;  /* Ajusta el tamaño de las imágenes */
+    height: auto;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.question-text {
+    font-size: 2rem; /* Aumenta el tamaño del texto */
+    color: #000;     /* Cambia el color a negro */
+    font-weight: bold; /* (Opcional) Para hacer el texto más destacado */
+    text-align: center; /* (Opcional) Para centrar la pregunta */
+    flex: 1;          /* Asegura que la pregunta ocupe espacio suficiente */
+    margin: 0 20px;   /* Añade un margen entre las imágenes */
+}
+
+.answer-button {
+    height: 90px;        /* Aumenta la altura de los botones */
+    font-size: 1.5rem;   /* Ajusta el tamaño del texto */
+    padding: 70px 20px;  /* Añade espacio interior */
+    border-radius: 8px;  /* Opcional: redondea las esquinas */
+    display: flex;       /* Centra el contenido */
+    align-items: center;
+    justify-content: center;
+}
+
+.is-red {
+    background-color: #FF4D4D; /* Rojo */
+    color: whitesmoke;
+    border: none;
+    font-weight: bold;
+}
+
+.is-red:hover,
+.is-red:focus {
+    background-color: #8d1d1d; /* Rojo más oscuro */
+    color: black;
+}
+
+.is-blue {
+    background-color: #4D79FF; /* Azul */
+    color: whitesmoke;
+    border: none;
+    font-weight: bold;
+}
+.is-blue:hover,
+.is-blue:focus {
+    background-color: #263e94; /* Azul más oscuro */
+    color: black;
+}
+
+.is-green {
+    background-color: #4DFF88; /* Verde */
+    color: whitesmoke;
+    border: none;
+    font-weight: bold;
+}
+
+.is-green:hover,
+.is-green:focus {
+    background-color: #279148; /* Verde más oscuro */
+    color: black;
+}
+
+.is-yellow {
+    background-color: #FFD34D; /* Amarillo */
+    color: whitesmoke;
+    font-weight: bold;
+    border: none;
+}
+
+.is-yellow:hover,
+.is-yellow:focus {
+    background-color: #D4B03C; /* Amarillo más oscuro */
+    color: black;
 }

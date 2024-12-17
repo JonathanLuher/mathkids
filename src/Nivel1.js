@@ -1,6 +1,16 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import './Nivel1.css';
-import TextoIntroductorio from './TextoIntroductorio';
+import TextoIntroductorio from './TextoIntroductorio';  // Importamos el nuevo componente
+import leftImage from './images/pensativo2.jpeg';
+import rightImage from './images/pensativo1.png';
+import correctLeftImage from './images/feliz2.jpeg';
+import correctRightImage from './images/feliz1.jpeg';
+import incorrectLeftImage from './images/triste2.jpeg';
+import incorrectRightImage from './images/triste1.jpeg';
+//const [leftImageSrc, setLeftImageSrc] = useState(leftImage);
+//const [rightImageSrc, setRightImageSrc] = useState(rightImage);
+
+
 
 // Función para mezclar un arreglo de forma aleatoria (Fisher-Yates)
 const shuffleArray = (array) => {
@@ -20,7 +30,9 @@ const Nivel1 = () => {
     const [answeredQuestions, setAnsweredQuestions] = useState([]);
     const [isStarted, setIsStarted] = useState(false);
     const [isFinished, setIsFinished] = useState(false);
+    const buttonColors = ['is-red', 'is-blue', 'is-green', 'is-yellow']; 
 
+    
     // Obtener preguntas desde el servidor
     useEffect(() => {
         const fetchQuestions = async () => {
@@ -74,12 +86,20 @@ const Nivel1 = () => {
     const checkAnswer = (selectedOption) => {
         if (selectedOption === currentQuestion.correctAnswer) {
             setCorrectCount(correctCount + 1);
+            setLeftImageSrc(correctLeftImage);
+            setRightImageSrc(correctRightImage);
         } else {
             setIncorrectCount(incorrectCount + 1);
+            setLeftImageSrc(incorrectLeftImage);
+            setRightImageSrc(incorrectRightImage);
         }
 
+        setTimeout(() => {
+            setLeftImageSrc(leftImage);
+            setRightImageSrc(rightImage);
         // Obtener una nueva pregunta después de la respuesta
         getNewQuestion();
+        },2000);
     };
 
     // Comenzar el ejercicio
@@ -109,13 +129,25 @@ const Nivel1 = () => {
                             {currentQuestion && !isFinished && (
                                 <div className="card has-background-white has-shadow">
                                     <div className="card-content">
-                                        <p className="subtitle">{currentQuestion.question}</p>
+                                        <div className="question-container">
+                                            <img 
+                                                className="side-image"
+                                                src={leftImage}
+                                                alt="Imagen izquierda" />
+                                        <p className="question-text">{currentQuestion.question}</p>
+                                        <img 
+                                                className="side-image"
+                                                src={rightImage}
+                                                alt="Imagen derecha" />
+                                        </div>
+                                        
                                         {/* Aquí organizamos los botones en 2 columnas dentro de la card */}
+                                        
                                         <div className="columns is-multiline">
                                             {currentQuestion.options.map((option, index) => (
                                                 <div key={index} className="column is-6">
                                                     <button
-                                                        className="button is-option is-fullwidth"
+                                                        className={`button is-option is-fullwidth answer-button ${buttonColors[index % buttonColors.length]}`}
                                                         onClick={() => checkAnswer(option)}
                                                     >
                                                         {option}
