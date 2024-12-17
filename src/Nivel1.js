@@ -7,10 +7,6 @@ import correctLeftImage from './images/feliz2.jpeg';
 import correctRightImage from './images/feliz1.jpeg';
 import incorrectLeftImage from './images/triste2.jpeg';
 import incorrectRightImage from './images/triste1.jpeg';
-//const [leftImageSrc, setLeftImageSrc] = useState(leftImage);
-//const [rightImageSrc, setRightImageSrc] = useState(rightImage);
-
-
 
 // Función para mezclar un arreglo de forma aleatoria (Fisher-Yates)
 const shuffleArray = (array) => {
@@ -30,9 +26,12 @@ const Nivel1 = () => {
     const [answeredQuestions, setAnsweredQuestions] = useState([]);
     const [isStarted, setIsStarted] = useState(false);
     const [isFinished, setIsFinished] = useState(false);
-    const buttonColors = ['is-red', 'is-blue', 'is-green', 'is-yellow']; 
+    const buttonColors = ['is-red', 'is-blue', 'is-green', 'is-yellow'];
 
-    
+    // Definir los estados para las imágenes
+    const [leftImageSrc, setLeftImageSrc] = useState(leftImage);
+    const [rightImageSrc, setRightImageSrc] = useState(rightImage);
+
     // Obtener preguntas desde el servidor
     useEffect(() => {
         const fetchQuestions = async () => {
@@ -97,9 +96,9 @@ const Nivel1 = () => {
         setTimeout(() => {
             setLeftImageSrc(leftImage);
             setRightImageSrc(rightImage);
-        // Obtener una nueva pregunta después de la respuesta
-        getNewQuestion();
-        },2000);
+            // Obtener una nueva pregunta después de la respuesta
+            getNewQuestion();
+        }, 2000);
     };
 
     // Comenzar el ejercicio
@@ -132,17 +131,16 @@ const Nivel1 = () => {
                                         <div className="question-container">
                                             <img 
                                                 className="side-image"
-                                                src={leftImage}
+                                                src={leftImageSrc}
                                                 alt="Imagen izquierda" />
-                                        <p className="question-text">{currentQuestion.question}</p>
-                                        <img 
+                                            <p className="question-text">{currentQuestion.question}</p>
+                                            <img 
                                                 className="side-image"
-                                                src={rightImage}
+                                                src={rightImageSrc}
                                                 alt="Imagen derecha" />
                                         </div>
                                         
                                         {/* Aquí organizamos los botones en 2 columnas dentro de la card */}
-                                        
                                         <div className="columns is-multiline">
                                             {currentQuestion.options.map((option, index) => (
                                                 <div key={index} className="column is-6">
