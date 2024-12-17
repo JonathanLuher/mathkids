@@ -67,23 +67,6 @@ h1 {
     font-weight: bold;
 }
 
-/* Estilos generales para los botones de acción */
-button {
-    padding: 1em 2em;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    margin-top: 1.5em;
-    width: 80%;
-}
-
-button:hover {
-    background-color: #0056b3;
-}
-
 /* Contadores de resultados */
 #correct-count,
 #incorrect-count {
@@ -176,7 +159,7 @@ button:hover {
 }
 
 
-.is-primary {
+.is-button-level {
     background-color: #547A52 !important; /* Púrpura oscuro para botón primario */
     border-color: #8174A0 !important;
     color: white !important;

@@ -18,6 +18,7 @@
   height: 100vh;
   padding: 20px;
   position: relative; /* Para colocar los elementos encima */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);
 }
 
 .timeline {

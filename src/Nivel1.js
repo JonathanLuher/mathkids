@@ -117,11 +117,10 @@ const Nivel1 = () => {
         <div className="container">
             <div className="card has-background-white has-shadow">
                 <div className="card-content">
-                    {/* Se reemplaza la parte del texto introductorio con el componente y pasamos startExercise */}
                     {!isStarted && <TextoIntroductorio startExercise={startExercise} />}
                     {isStarted && (
                         <>
-                            <div className="notification is-primary">
+                            <div className="notification is-button-level">
                                 <strong>Correctas: {correctCount}</strong> |{' '}
                                 <strong>Incorrectas: {incorrectCount}</strong>
                             </div>
