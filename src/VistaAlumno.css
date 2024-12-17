@@ -43,8 +43,8 @@ body {
 
 /* Imagen para cada nivel */
 .timeline-item .level-image {
-  width: 250px;  /* Tamaño ajustable */
-  height: 200px;
+  width: 200px;  /* Tamaño ajustable */
+  height: 160px;
   margin-bottom: 10px;
   transition: transform 0.3s ease; /* Efecto de transición cuando se selecciona o se pasa el mouse */
 }
@@ -65,3 +65,20 @@ body {
   text-align: center;
 }
 
+/* Media query para dispositivos móviles y tablets */
+@media (max-width: 1012px) {
+  .timeline {
+    flex-direction: column; /* Cambia la dirección a vertical */
+    align-items: center; /* Centra los elementos horizontalmente */
+  }
+
+  .timeline-item {
+    margin: 0px 0; /* Ajusta el margen superior e inferior */
+  }
+
+
+  .timeline-item .level-image {
+    width: 150px; /* Ajusta el tamaño de la imagen para pantallas más pequeñas */
+    height: 120px;
+  }
+}
