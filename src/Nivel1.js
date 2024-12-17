@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import './Nivel1.css';
+import TextoIntroductorio from './TextoIntroductorio';  // Importamos el nuevo componente
 
 // Función para mezclar un arreglo de forma aleatoria (Fisher-Yates)
 const shuffleArray = (array) => {
@@ -97,17 +98,9 @@ const Nivel1 = () => {
         <div className="container">
             <div className="card has-background-white has-shadow">
                 <div className="card-content">
-                    <h1 className="title has-text-centered has-text-dark">
-                        ¡Prepárate para resolver ejercicios matemáticos!
-                    </h1>
-                    {!isStarted ? (
-                        <button
-                            className="button is-primary is-fullwidth"
-                            onClick={startExercise}
-                        >
-                            Comenzar
-                        </button>
-                    ) : (
+                    {/* Se reemplaza la parte del texto introductorio con el componente y pasamos startExercise */}
+                    {!isStarted && <TextoIntroductorio startExercise={startExercise} />}
+                    {isStarted && (
                         <>
                             <div className="notification is-primary">
                                 <strong>Correctas: {correctCount}</strong> |{' '}
@@ -120,10 +113,11 @@ const Nivel1 = () => {
                                         {/* Aquí organizamos los botones en 2 columnas dentro de la card */}
                                         <div className="columns is-multiline">
                                             {currentQuestion.options.map((option, index) => (
-                                                <div key={index}className="column is-6">
+                                                <div key={index} className="column is-6">
                                                     <button
                                                         className="button is-option is-fullwidth"
-                                                        onClick={() => checkAnswer(option)}>
+                                                        onClick={() => checkAnswer(option)}
+                                                    >
                                                         {option}
                                                     </button>
                                                 </div>
