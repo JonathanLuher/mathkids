@@ -1,0 +1,14 @@
+/* Avatar.css */
+.avatar-container {
+    text-align: center;
+}
+
+.avatar-image {
+    width: 150px;
+    height: 150px;
+    transition: transform 0.3s ease;
+}
+
+.avatar-image:hover {
+    transform: scale(1.1); /* Efecto para hacer que la imagen crezca un poco al pasar el ratón */
+}
